@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  springboot:
+     container_name: docker-muktars
+     image: docker-muktars
+     build: ./
+     ports:
+       - "8080:8080"
+     depends_on:
+       - postgres
+
+
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    ports:
+      - "5433:5432"
