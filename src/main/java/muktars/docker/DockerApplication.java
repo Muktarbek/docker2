@@ -14,6 +14,6 @@ public class DockerApplication {
 	}
 	@GetMapping("/")
 	public String home() {
-		return "Welcome to Taigan Application";
+		return "Welcome Home";
 	}
 }
